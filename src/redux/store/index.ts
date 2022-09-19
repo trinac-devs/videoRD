@@ -1,12 +1,13 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import {videoApi} from '../apis';
-import {videoReducer} from '../slices';
+import {videoReducer, videoUploaderReducer} from '../slices';
 
 // import logger from 'redux-logger';
 
 const rootReducer = combineReducers({
   [videoApi.reducerPath]: videoApi.reducer,
   videoReducer,
+  videoUploaderReducer,
 });
 
 // const persistedReducer = persistReducer(persistConfig, rootReducer);

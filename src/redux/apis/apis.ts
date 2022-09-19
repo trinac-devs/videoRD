@@ -10,6 +10,7 @@ const BASE_URL = 'https://mydoormot.xyz';
 const MEDIA_ROUTE = `${BASE_URL}/api/v1/media`;
 
 export const GET_ALL_VIDEOS = `${MEDIA_ROUTE}/get-all-videos`;
+export const UPLOAD_VIDEO = `${MEDIA_ROUTE}/upload-video`;
 
 const axiosBaseQuery = (): BaseQueryFn<
   {
