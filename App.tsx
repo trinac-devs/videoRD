@@ -1,12 +1,23 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import VideoScreen from './src/screens/VideoScreen';
+import {
+  Provider as PaperProvider,
+  MD3LightTheme as DefaultTheme,
+} from 'react-native-paper';
+import {NavigationContainer} from '@react-navigation/native';
+import {Provider} from 'react-redux';
+import {store} from './src/redux/store';
+
+import RootStack from './src/navigation/RootStack';
 
 const App = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <VideoScreen />
-    </SafeAreaView>
+    <Provider store={store}>
+      <PaperProvider theme={DefaultTheme}>
+        <NavigationContainer>
+          <RootStack />
+        </NavigationContainer>
+      </PaperProvider>
+    </Provider>
   );
 };
 
